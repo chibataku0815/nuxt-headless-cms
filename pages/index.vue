@@ -1,31 +1,41 @@
 <template>
-  <main class="container main-contents">
+  <section class="container">
     <div>
-      <PostList :posts="post_list" />
+      <logo/>
+      <h1 class="title">
+        store-lesson
+      </h1>
+      <h2 class="subtitle">
+        Nuxt.js project
+      </h2>
+      <div id="app">
+        <Message></Message>
+        <InputMessage></InputMessage>
+      </div>
     </div>
-  </main>
+  </section>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import PostList from '~/components/posts/PostList.vue'
-import wp from '~/lib/wp'
-import { types } from '~/store'
+import Logo from '~/components/Logo.vue'
+import InputMessage from '~/components/InputMessage.vue'
+import Message from '~/components/Message.vue'
+
 export default {
-  fetch ({ store, params }) {
-    return wp.posts()
-      .then(json => {
-        store.commit(types.POST_LIST_UPDATE, json.posts)
-      })
-  },
-  head () {
-    return {
-      title: `${this.site_data.name} | Home`
-    }
-  },
-  computed: mapState(['post_list', 'site_data']),
   components: {
-    PostList
+    Logo,
+    InputMessage,
+    Message
   }
 }
 </script>
+
+<style>
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+

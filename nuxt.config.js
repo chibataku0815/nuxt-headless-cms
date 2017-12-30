@@ -21,7 +21,18 @@ module.exports = {
     '~node_modules/element-ui/packages/theme-chalk/lib/icon.css',
     'assets/main.scss'
   ],
+  modules: [
+    // Simple usage
+    'nuxt-netlify-cms',
 
+    // With options
+    ['nuxt-netlify-cms', { adminPath: 'secure' }]
+  ],
+
+  // You can optionally use global options instead of inline form
+  netlifyCms: {
+    adminPath: 'secure'
+  },
 
   /*
   ** Build configuration
