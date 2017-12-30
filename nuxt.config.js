@@ -26,7 +26,7 @@ module.exports = {
     'nuxt-netlify-cms',
 
     // With options
-    ['nuxt-netlify-cms', { adminPath: 'dist/admin' }]
+    ['nuxt-netlify-cms', { adminPath: './' }]
   ],
 
   // You can optionally use global options instead of inline form

@@ -1,5 +1,5 @@
 backend:
-  name: nuxt-headless-cms
+  name: chibataku0815/nuxt-headless-cms
 
 display_url: https://forestone.work
 media_folder: 'assets/uploads'
