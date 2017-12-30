@@ -1,6 +1,7 @@
 backend:
-  name: test-repo
+  name: nuxt-headless-cms
 
+display_url: https://forestone.work
 media_folder: 'assets/uploads'
 
 collections: # A list of collections the CMS should be able to edit
