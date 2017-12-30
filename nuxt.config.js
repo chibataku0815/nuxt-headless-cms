@@ -26,12 +26,12 @@ module.exports = {
     'nuxt-netlify-cms',
 
     // With options
-    ['nuxt-netlify-cms', { adminPath: 'dist/_nuxt/secure' }]
+    ['nuxt-netlify-cms', { adminPath: 'dist/admin' }]
   ],
 
   // You can optionally use global options instead of inline form
   netlifyCms: {
-    adminPath: 'secure'
+    adminPath: 'admin'
   },
 
   /*
