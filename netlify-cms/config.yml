@@ -1,7 +1,9 @@
 backend:
-  name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
-publish_mode: editorial_workflow
+  name: chibataku0815/nuxt-headless-cms
+
+display_url: https://forestone.work
+media_folder: 'assets/uploads'
+
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
