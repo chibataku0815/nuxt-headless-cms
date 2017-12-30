@@ -1,62 +1,31 @@
 <template>
-  <section class="container">
+  <main class="container main-contents">
     <div>
-      <logo/>
-      <h1 class="title">
-        store-lesson
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div id="app">
-        <Message></Message>
-        <InputMessage></InputMessage>
-      </div>
+      <PostList :posts="post_list" />
     </div>
-  </section>
+  </main>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import InputMessage from '~/components/InputMessage.vue'
-import Message from '~/components/Message.vue'
-
+import { mapState } from 'vuex'
+import PostList from '~/components/posts/PostList.vue'
+import wp from '~/lib/wp'
+import { types } from '~/store'
 export default {
+  fetch ({ store, params }) {
+    return wp.posts()
+      .then(json => {
+        store.commit(types.POST_LIST_UPDATE, json.posts)
+      })
+  },
+  head () {
+    return {
+      title: `${this.site_data.name} | Home`
+    }
+  },
+  computed: mapState(['post_list', 'site_data']),
   components: {
-    Logo,
-    InputMessage,
-    Message
+    PostList
   }
 }
 </script>
-
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
