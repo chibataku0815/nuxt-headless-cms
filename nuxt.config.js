@@ -13,6 +13,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  plugins: ['~/plugins/axios'],
   /*
   ** Customize the progress bar color
   */
