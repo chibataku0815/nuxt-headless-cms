@@ -12,7 +12,8 @@ module.exports = {
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' },
       { rel: 'stylesheet', href: 'https://use.typekit.net/mwb5dtr.css' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'javascript', href: 'https://use.typekit.net/mwb5dtr.js' }
     ]
   },
   plugins: [
