@@ -10,34 +10,39 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' },
+      { rel: 'stylesheet', href: 'https://use.typekit.net/mwb5dtr.css' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  plugins: ['~/plugins/axios'],
+  plugins: [
+    '~/plugins/axios',
+    '~/plugins/element-ui'
+  ],
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
   css: [
     '~node_modules/element-ui/packages/theme-chalk/lib/icon.css',
-    'assets/main.scss'
+    'assets/stylesheets/main.scss'
   ],
-  // Add apollo module
-  modules: [
-    // Simple usage
-    'nuxt-netlify-cms'
-  ],
+  // // Add apollo module
+  // modules: [
+  //   // Simple usage
+  //   'nuxt-netlify-cms'
+  // ],
 
-  // You can optionally use global options instead of inline form
-  netlifyCms: {
-    adminPath: 'admin'
-  },
+  // // You can optionally use global options instead of inline form
+  // netlifyCms: {
+  //   adminPath: 'admin'
+  // },
 
   /*
   ** Build configuration
   */
   build: {
-    vendor: ['axios'],
+    vendor: ['axios', 'element-ui'],
     /*
     ** Run ESLint on save
     */

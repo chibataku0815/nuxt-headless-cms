@@ -1,8 +1,4 @@
-/* theme color */
-
-$--color-primary: #000000;
-$--font-path: '~/node_modules/element-ui/lib/theme-chalk/fonts/' !default;
-@font-face {
+font-face {
   font-family: 'element-icons';
   src: url('#{$--font-path}/element-icons.woff?t=1510834658947') format('woff'),
   /* chrome, firefox */
@@ -329,5 +325,3 @@ $--font-path: '~/node_modules/element-ui/lib/theme-chalk/fonts/' !default;
     transform: rotateZ(360deg);
   }
 }
-
-@import "~element-ui/packages/theme-chalk/src/index";

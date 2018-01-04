@@ -1,52 +1,34 @@
-<template>
-  <div>
-    <nuxt/>
-  </div>
+<template lang="pug">
+  el-container
+    el-row.header(type='flex', justify='center', align='middle')
+      el-col(:xs='20', :sm='20', :md='20', :lg='22', :xl='1',type='flex', justify='center')
+        Logo
+      el-col(:xs='4', :sm='4', :md='4', :lg='2', :xl='1',type='flex', justify='center', align='middle')
+        MainNavi
+    el-main
+      nuxt
+    el-footer Footer
 </template>
 
-<style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script>
+  import Logo from '~/components/Logo'
+  import MainNavi from '~/components/MainNavi'
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-}
+  export default {
+    components: {
+      Logo,
+      MainNavi
+    }
+  }
+</script>
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+<style lang="scss">
+  .header {
+    padding: 0;
+    min-height: 60px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+  }
+  .el-main {
+    padding: 0;
+  }
 </style>

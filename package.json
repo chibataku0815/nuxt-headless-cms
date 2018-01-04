@@ -15,11 +15,13 @@
   "dependencies": {
     "axios": "^0.17.1",
     "element-ui": "^2.0.10",
+    "material-icons": "^0.1.0",
     "node-sass": "^4.7.2",
     "nuxt": "^1.0.0-rc11",
     "pug": "2.0.0-beta6",
     "pug-loader": "^2.3.0",
-    "sass-loader": "^6.0.6"
+    "sass-loader": "^6.0.6",
+    "vue-axios": "^2.0.2"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
